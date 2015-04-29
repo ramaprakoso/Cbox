@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up</title>
+	  <?php echo HTML::style('../public/css/bootstrap.css'); ?>
+
+	  <?php echo HTML::style('../public/css/style.css'); ?>
+
+</head>
+<body>
+	<div id="overlay"></div>
+	
+	<div class="container">
+		<div class="row">
+
+			
+  			<div class="col-xs-6 col-sm-4"></div>
+  			<div class="col-xs-6 col-sm-4 jumbotron margin-top">
+  			<div class="radial"><img src="../public/image/cnc.png"></div>
+  				<h2 class="text-center">Sign Up</h2>
+
+  				<?php echo Form::open(array('url' => 'users')); ?>
+
+
+				    <div class="form-group">
+				       	<img src="../public/image/user.png" class="icon" />
+				        <?php echo Form::label('name', 'Fullname'); ?>
+
+				        <?php echo Form::text('name', Input::old('name'), array('class' => 'form-control')); ?>
+
+				    </div>
+
+				    <div class="form-group">
+				   		 <img src="../public/image/email.png" class="icon" />
+				        <?php echo Form::label('email', 'Email'); ?>
+
+				        <?php echo Form::email('email', Input::old('email'), array('class' => 'form-control')); ?>
+
+				    </div>
+
+				     <div class="form-group">
+				     	<img src="../public/image/user.png" class="icon" />
+				        <?php echo Form::label('username', 'Username'); ?>
+
+				        <?php echo Form::text('username', Input::old('username'), array('class' => 'form-control')); ?>
+
+				        
+				    </div>
+
+				     <div class="form-group">
+				     	<img src="../public/image/password.png" class="icon" />
+				        <?php echo Form::label('password', 'password'); ?>
+
+
+				        <?php echo Form::password('password',array('class' => 'form-control')); ?>
+
+				     
+				    </div>
+
+    
+
+    				<?php echo Form::submit('Register', array('class' => 'btn btn-success form-control')); ?>
+
+
+				<?php echo Form::close(); ?>
+
+				
+				<a href="<?php echo URL::to('login'); ?>">Login?</a>
+  			</div>
+  			
+  			<div class="col-xs-6 col-sm-4"></div>
+  			
+			
+		</div>
+		
+	</div>
+
+
+</body>
+</html>
+
+

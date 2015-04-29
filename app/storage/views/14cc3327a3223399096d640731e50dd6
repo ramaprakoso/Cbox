@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ 
+</style>
+	<title>Login</title>
+	
+	  <?php echo HTML::style('public/css/style.css'); ?>
+
+	  <?php echo HTML::style('public/css/background.css'); ?>
+
+	  <link rel="icon" href="public/image/oke.png" sizes="64x64" type="image/png">
+</head>
+<body>
+<div id="overlay"></div>
+<div class="container loginActive">
+
+	<div class="logo"></div>
+  	<p class="center">As much storage as you need</p>
+
+  	<?php echo Form::open(array('url' => 'login', 'class' => 'loginForm')); ?>
+
+  	
+		<?php echo $errors->first('username'); ?>
+
+		<?php echo $errors->first('password'); ?>
+
+		
+			<?php echo Form::text('username', Input::old('username'), array('placeholder'=> 'Username','required' => 'required')); ?>
+
+			<?php echo Form::password('password', array('placeholder' => 'Password','required' => 'required')); ?>
+
+			<?php echo Form::submit('Login', array('class' => 'btn btn-success form-control')); ?>
+
+
+	<?php echo Form::close(); ?>
+
+
+	<?php echo Form::open(array('url' => 'users', 'class' => 'registForm')); ?>
+
+  	
+		<?php echo $errors->first('username'); ?>
+
+		<?php echo $errors->first('password'); ?>
+
+		
+			<?php echo Form::text('name', Input::old('name'), array('placeholder'=> 'Name','required' => 'required')); ?>
+
+			<?php echo Form::email('email', Input::old('email'), array('placeholder'=> 'Email','required' => 'required')); ?>
+
+			<?php echo Form::text('username', Input::old('username'), array('placeholder'=> 'Username','required' => 'required')); ?>
+
+			<?php echo Form::password('password', array('placeholder' => 'Password','required' => 'required')); ?>
+
+			<?php echo Form::submit('Register', array('class' => 'btn btn-success form-control')); ?>
+
+
+	<?php echo Form::close(); ?>
+
+
+ 
+
+  <button class="registOpen">Login!</button>
+
+  <button class="loginOpen">Register!</button>
+</div>
+
+<script type="text/javascript" src="public/js/jquery.js"></script>
+<script type="text/javascript" src="public/js/js.js"></script>
+</div>
+</body>
+</html>
+
+

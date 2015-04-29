@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../public/css/style.css">
+</head>
+<body>
+
+	<?php echo Form::open(array('url' =>'upload','action'=>'UploadController@store','class'=>'dropzone'));; ?>	
+		<div class="fallback">
+			{ Form::file('file') }}
+		</div>		
+		<?php echo Form::close();; ?>
+
+
+
+<script type="text/javascript" src="../public/js/dropzone.js"></script>
+</body>
+</html>

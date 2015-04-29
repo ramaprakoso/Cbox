@@ -1,0 +1,12 @@
+<?php foreach($products as $product): ?>
+  	<tr>
+  		<td><?php echo $product->username; ?></td>
+  		<td><?php echo $product->type; ?></td>
+  		<td><?php echo $product->file_name; ?></td>
+  		<td>
+  			
+  		</td>
+  	</tr>
+  <?php endforeach; ?>
+
+  <?php echo $products->links(); ?>

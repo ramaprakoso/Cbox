@@ -1,0 +1,21 @@
+
+
+<?php if($paginator->getLastPage() > 1): ?>
+
+  <a href="<?php echo $paginator->getUrl(1); ?>"
+    class="item<?php echo ($paginator->getCurrentPage() == 1) ? ' disabled' : ''; ?>">
+    <i class="fa fa-angle-double-left"></i> Previous
+  </a>
+  <?php for($i = 1; $i <= $paginator->getLastPage(); $i++): ?>
+  <a href="<?php echo $paginator->getUrl($i); ?>"
+    class="item<?php echo ($paginator->getCurrentPage() == $i) ? ' active' : ''; ?>">
+      <?php echo $i; ?>
+
+  </a>
+  <?php endfor; ?>
+  <a href="<?php echo $paginator->getUrl($paginator->getCurrentPage()+1); ?>"
+    class="item<?php echo ($paginator->getCurrentPage() == $paginator->getLastPage()) ? ' disabled' : ''; ?>">
+    Next <i class="fa fa-angle-double-right "></i>
+  </a>
+
+<?php endif; ?>
